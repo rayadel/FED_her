@@ -1,0 +1,428 @@
+/*** Nexa regular font face ***/
+@font-face{	
+	font-family:'Nexa'; 
+	src:url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_Regular-webfont.woff2") format("woff2"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_Regular-webfont.woff") format("woff"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_Regular-webfont.ttf") format("truetype"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_Regular-webfont.svg#nexa_regularregular") format("svg");
+
+	font-weight:normal;
+	font-style:normal;
+	font-stretch:normal
+}
+
+/*** Nexa bold font face ***/
+@font-face{
+	font-family:'Nexa';
+	src:url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_XBold-webfont.woff2") format("woff2"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_XBold-webfont.woff") format("woff"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_XBold-webfont.ttf") format("truetype"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/Nexa_XBold-webfont.svg#nexa_xboldregular") format("svg");
+
+	font-weight:bold;
+	font-style:normal;
+	font-stretch:normal
+}
+
+
+@font-face{
+	font-family:'transavicon';
+	src:url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/transavicon.woff2?v=20170425") format("woff2"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/transavicon.woff?v=20170425") format("woff"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/transavicon.ttf?v=20170425") format("truetype"),
+	url("https://d2r10dgfvm1dpq.cloudfront.net/static/fonts/transavicon.svg?v=20170425#transavicon") format("svg");
+}
+
+
+/* Base 
+Type selector*/
+
+body{
+	
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+
+	background-color: #00d66c;
+	font-family:'Nexa', Arial, Helvetica, sans-serif;
+	font-size: 16px;
+
+}
+
+fieldset{
+	border: 0;
+}
+
+/* Grid */
+
+.bar {
+	display: flex;
+	box-sizing: border-box;
+	position: relative;
+	
+	justify-content: space-between;
+	padding: 1.4rem;
+	width: 100%;
+
+	background: #FFFFFF;
+	
+	
+}
+
+
+.row {
+
+	display: flex;
+	box-sizing: border-box;
+
+	flex: 0 1 auto;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	margin-right: -.5rem;
+	margin-left: -.5rem;
+
+}
+
+.container {
+	display: flex;
+	box-sizing: border-box;
+
+	margin: auto;
+	max-width: 63em;
+	
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.story-tile {
+	box-sizing: border-box;
+
+	margin-top: 3rem;
+	padding: 2.3rem;
+
+	flex: 0 1 19em;
+
+	height: auto;
+	overflow-y: hidden;
+	border-radius: 1em;
+
+	background-color: #eedac8;
+	
+
+}
+
+/* Layout */
+
+h2 {
+	margin-top: 0;
+}
+
+ul {
+	margin: 0;
+  	padding: 0;
+
+  	width: 100%;
+
+  	border-bottom: 1px solid lightgrey;
+  	box-shadow: 0.5em;
+
+  	background-color: white;
+  	list-style-type: none;
+}
+
+li {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+/* descedant selector > selects all a elements inside the li elements */
+li a {
+	text-decoration: none;
+
+	color: #00d66c;
+}
+
+.main{
+
+	margin: 0 auto; /*Center main*/
+	
+	width: 96%; /* Leave green margins */
+	max-width: 48rem;
+
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+
+	background-color: #FFFFFF;
+
+}
+
+.form{
+	margin-top: 7em;
+	padding: 1.75rem 2rem;
+
+
+	text-align: center;
+}
+
+@media (max-width: 48em) {
+	.form{
+		padding: 1rem 1rem;
+	}
+}
+
+/* attribute selector > selects all elements with this input types attributes */
+.form input[type=text],
+.form input[type=number],
+.form input[type=password],
+.form input[type=tel],
+.form input[type=email]{
+
+	box-sizing: border-box;	
+	padding: 0 .5rem 0 .5rem;
+	
+	width: 100%;
+	max-width: 21em;
+    
+	border: .06em solid #91a3b7;
+   	border-radius: 0.5em;
+   	outline: none;
+
+    line-height: 3em;
+    font-family: 'Nexa', Arial, Helvetica, sans-serif;;
+
+}
+
+.form input[type=text]:focus,
+.form input[type=number]:focus,
+.form input[type=password]:focus,
+.form input[type=tel]:focus,
+.form input[type=email]:focus{
+	border: .08em solid #2800A0;
+
+}
+
+@media (max-width: 48em) {
+
+	.form input[type=text],
+	.form input[type=number],
+	.form input[type=password],
+	.form input[type=tel],
+	.form input[type=email]{
+		max-width:none; /* Fill out input fields */
+	}
+}
+
+@media (max-width: 60em) {
+
+	.container {
+		justify-content: space-around;
+	}
+} 
+
+/*pseudo element > insert something before each class button*/
+
+.button::before {
+  content: 'Aanmelden'
+}
+@media (max-width: 48em) {
+  .button::before {
+    font-family: FontAwesome;
+    content: '\f007';
+    font-weight: normal;
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 23em) {
+
+	.container {
+		width: 100%
+		;
+		padding: 0 1rem;
+
+		flex-direction: column;	
+		justify-content: center;
+	}
+	.story-tile {
+		flex: 0;
+		max-width: 19.5em;
+	}
+} 
+
+
+.form input[type=submit]{
+
+    display: inline-block;
+    position: relative;
+
+	margin: 0;
+    padding: .45em 1.5em .55em;
+
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+	
+	transition: background-color .6s linear;
+
+    border: 0;
+    border-radius: 1.25em;
+
+	background-color: #ff3268;
+    box-shadow: inset 0 -.18em 0.06em #ca2b55;
+
+    text-decoration: none;
+    line-height: 1.5;
+    
+    font-family: 'Nexa', Arial, Helvetica, sans-serif;;
+    font-size: 1em;
+    font-weight: bold;
+    
+    color: #FFFFFF;
+
+}
+
+/*pseudo class > selects links on mouse hover*/
+
+li a:hover {
+  color: #2800A0;
+}
+
+.form input[type=submit]:hover{
+
+	background-color: darkred;
+
+}
+
+.form p{
+	font-size: .9em;
+}
+
+.form label,
+.form div{
+	
+	/* Mobile fill out*/
+
+	padding-right: .5rem;
+	padding-left: .5rem;
+
+	box-sizing: border-box;
+	flex: 0 0 auto;
+	
+	flex-basis: 100%;
+  	max-width: 100%;
+
+}
+
+@media (min-width: 48em) {
+	.form label{	
+		flex-basis: 33.33333333%;
+	    max-width: 33.33333333%;
+	}
+
+	.form div{	
+		flex-basis: 66.66666667%;
+    	max-width: 66.66666667%;
+	}	
+}
+
+.form label{
+	
+	padding-top: .9rem;
+	padding-right: 2rem;
+
+	font-weight: bold;
+	text-align: right;
+
+}
+
+@media (max-width: 48em) {
+	.form label{
+		text-align: left;
+	}
+}
+
+.form div{
+
+	text-align: left;
+}
+
+
+.form__introduction{
+	text-align: center;
+}
+
+.form__header{
+	color: #00d66c;
+	font-size: 1.5em;
+}
+
+.form__fieldset-header{
+	color: #2801a0;
+	font-size: 1.25em;
+}
+
+.date--day,
+.date--month,
+.date--year{
+	
+	/* No style*/
+
+}
+
+.date--day,
+.date--month{
+	margin-right: .3rem;
+	width: 5em !important;
+}
+
+.date--year{
+	width: 10em !important;
+}
+
+@media (max-width: 48em) {
+	.date--day,
+	.date--month{
+		margin-right: 3.5%;
+		width: 20% !important;
+	}
+
+	.date--year{
+		width: 50% !important;
+	}
+}
+
+@media (max-width: 22em) {
+	.date--day,
+	.date--month{
+		width: 47.5% !important;
+		margin: 0;
+		margin-bottom: 1em;
+	}
+
+	.date--day{
+		margin-right: 3%;
+	}
+
+	.date--year{
+		width: 100% !important;
+	}
+}
+
+.footer{
+	background-color: #f5f8fa;
+	padding: 1.75rem 2rem;
+	text-align: center;
+
+	-webkit-border-bottom-left-radius: 1em;
+	-webkit-border-bottom-right-radius: 1em;
+	-moz-border-radius-bottomleft: 1em;
+	-moz-border-radius-bottomright: 1em;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 2em;
+}
+
+
+
+

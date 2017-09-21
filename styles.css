@@ -359,8 +359,13 @@ li a:hover {
 }
 
 .form__fieldset-header{
-	color: #2801a0;
+	padding-bottom: 0.5rem;
+
 	font-size: 1.25em;
+	font-weight: bold;
+
+	color: #2801a0;
+
 }
 
 .date--day,
